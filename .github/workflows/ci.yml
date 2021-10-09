@@ -40,4 +40,5 @@ jobs:
           EOF
 
           heroku git:remote --app $HEROKU_APP_NAME
+          git fetch --all --unshallow
           git push heroku main
