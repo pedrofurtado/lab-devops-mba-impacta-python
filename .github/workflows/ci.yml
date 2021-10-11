@@ -1,9 +1,10 @@
-name: CI - Lab demo da Impacta
+name: Pipeline
 
 on: [push, workflow_dispatch]
 
 jobs:
-  build:
+  ci:
+    name: CI for Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,13 +25,13 @@ jobs:
         run: |
           python -m unittest -v test
 
-      - name: SonarCloud Scan
+      - name: Scan of SonarCloud
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-      - id: deploy
+      - name: Deploy to Google Cloud App Engine
         uses: google-github-actions/deploy-appengine@main
         with:
           project_id: ${{ secrets.GCP_PROJECT_ID }}
