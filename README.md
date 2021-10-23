@@ -11,3 +11,5 @@
 Link do app na Heroku: https://lab-devops-aula2-pedrofurtado.herokuapp.com
 
 Link do app na GCP: https://mythic-tenure-328715.wl.r.appspot.com
+
+Obs: Quando o CI executa com sucesso, no Heroku foi configurado uma trigger para deploy no Heroku.
