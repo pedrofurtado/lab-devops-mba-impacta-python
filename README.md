@@ -12,4 +12,4 @@ Link do app na Heroku: https://lab-devops-aula2-pedrofurtado.herokuapp.com
 
 Link do app na GCP: https://mythic-tenure-328715.wl.r.appspot.com
 
-Obs: Quando o CI executa com sucesso, no Heroku foi configurado uma trigger para deploy no Heroku.
+Obs: Quando o CI executa com sucesso, no Heroku foi configurado uma trigger para deploy no Heroku. Para visualizar o deployment no Heroku, veja na parte de "Environments" do repositorio: https://github.com/pedrofurtado/lab-devops-mba-impacta-python/deployments
